@@ -1,24 +1,18 @@
 import 'package:flutter/material.dart';
 import '../app_style/colors.dart';
 
-
 class CustomTextField extends StatelessWidget {
   final String hintText;
-  final String labelText;
   final String? Function(String?)? validator;
   final void Function(String)? onChanged;
   final void Function(String?)? onSaved;
-
   final void Function(String)? onFieldSubmitted;
   final TextEditingController? controller;
   final TextInputType? keyboardType;
   final bool? obscureText;
-  final IconData? prefixIcon;
-  final Widget? suffixIcon;
-
-
   final AutovalidateMode? autovalidateMode;
-  final int? maxLines  ;
+  final int? maxLines;
+
   const CustomTextField({
     super.key,
     required this.hintText,
@@ -28,12 +22,9 @@ class CustomTextField extends StatelessWidget {
     this.controller,
     this.keyboardType,
     this.obscureText,
-    this.prefixIcon,
-    this.suffixIcon,
     this.onSaved,
     this.autovalidateMode,
-    required this.labelText,
-    this.maxLines =1 ,
+    this.maxLines = 1,
   });
 
   @override
@@ -51,18 +42,27 @@ class CustomTextField extends StatelessWidget {
       maxLines: maxLines,
       decoration: InputDecoration(
         hintText: hintText,
-        labelText: labelText,
         labelStyle: const TextStyle(color: Colors.white, fontSize: 14),
-        hintStyle: TextStyle(
-            color: const Color(0xFF949D9E),
-            fontSize: 12
+        hintStyle: const TextStyle(
+            color: Color(0xFFAAADB1),
+            fontSize: 16,
+            fontWeight: FontWeight.w700),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+          borderSide: const BorderSide(
+            color: Color(0xffD8DCE3),
+            width: 1.0,
+          ),
         ),
-        suffixIcon: suffixIcon,
-        prefixIcon: Icon(prefixIcon , color: AppColors.lightBlueColor,),
-        border: buildOutlineInputBorder(),
-        enabledBorder: buildOutlineInputBorder(),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+          borderSide: const BorderSide(
+            color: Color(0xffD8DCE3),
+            width: 1.0,
+          ),
+        ),
         focusedBorder: buildOutlineInputBorder(),
-        fillColor: AppColors.lightBlueColor,
+        fillColor: Colors.transparent,
         filled: true,
       ),
     );
