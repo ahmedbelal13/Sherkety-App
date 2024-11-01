@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sherkety/app_style/colors.dart';
-
+import '../../../../core/app_style/colors.dart';
 import '../widgets/custom_button.dart';
 import '../widgets/phone_number_row.dart';
 import 'forget_password_page.dart';
