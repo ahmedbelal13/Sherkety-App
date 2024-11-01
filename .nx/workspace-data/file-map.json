@@ -1,0 +1,571 @@
+{
+  "version": "6.0",
+  "nxVersion": "20.0.6",
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {},
+    "nonProjectFiles": [
+      {
+        "file": ".idea/.gitignore",
+        "hash": "15164360936821735952"
+      },
+      {
+        "file": ".idea/NX_WorkSpace.iml",
+        "hash": "14929846472669502702"
+      },
+      {
+        "file": ".idea/misc.xml",
+        "hash": "17613486566333685008"
+      },
+      {
+        "file": ".idea/modules.xml",
+        "hash": "17856261405825700358"
+      },
+      {
+        "file": ".idea/vcs.xml",
+        "hash": "16668122165370290817"
+      },
+      {
+        "file": "sherkety/.gitignore",
+        "hash": "17107242987988535020"
+      },
+      {
+        "file": "sherkety/.prettierignore",
+        "hash": "14688272390704683536"
+      },
+      {
+        "file": "sherkety/.prettierrc",
+        "hash": "16267754514737964994"
+      },
+      {
+        "file": "sherkety/.vscode/extensions.json",
+        "hash": "4134969992917317260"
+      },
+      {
+        "file": "sherkety/README.md",
+        "hash": "6751073142459167280"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/.gitignore",
+        "hash": "8185952768676751951"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/.metadata",
+        "hash": "16608981454210668043"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/README.md",
+        "hash": "8462388108287077002"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/analysis_options.yaml",
+        "hash": "9245961353574580177"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/android/.gitignore",
+        "hash": "7022660915982305346"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/android/app/build.gradle",
+        "hash": "1257807171835658256"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/android/app/src/debug/AndroidManifest.xml",
+        "hash": "17400841291332940227"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/android/app/src/main/AndroidManifest.xml",
+        "hash": "4657713305327765638"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/android/app/src/main/kotlin/com/example/sherkety/MainActivity.kt",
+        "hash": "11855468757592285789"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/android/app/src/main/res/drawable-v21/launch_background.xml",
+        "hash": "5277285452130087583"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/android/app/src/main/res/drawable/launch_background.xml",
+        "hash": "5511422839137257193"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+        "hash": "17515915797888911451"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/android/app/src/main/res/mipmap-mdpi/ic_launcher.png",
+        "hash": "12758156220368008677"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png",
+        "hash": "17821057072759496051"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+        "hash": "13291011583500627668"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+        "hash": "10239208634629745166"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/android/app/src/main/res/values-night/styles.xml",
+        "hash": "8349030034759943055"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/android/app/src/main/res/values/styles.xml",
+        "hash": "8968243407107788021"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/android/app/src/profile/AndroidManifest.xml",
+        "hash": "17400841291332940227"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/android/build.gradle",
+        "hash": "10680593930732396476"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/android/gradle.properties",
+        "hash": "1933790395485512996"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/android/gradle/wrapper/gradle-wrapper.properties",
+        "hash": "8565226809910836763"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/android/settings.gradle",
+        "hash": "7081703895770607768"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/assets/images/Social icon.png",
+        "hash": "18159135869744136472"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/assets/images/cib_apple.png",
+        "hash": "9578391299085805622"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/assets/images/flag.png",
+        "hash": "9496776121205646734"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/assets/images/google_ic.png",
+        "hash": "644445302662083332"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/.gitignore",
+        "hash": "9461365862467552703"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Flutter/AppFrameworkInfo.plist",
+        "hash": "11529496623945888018"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Flutter/Debug.xcconfig",
+        "hash": "8296355507416790924"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Flutter/Release.xcconfig",
+        "hash": "8296355507416790924"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner.xcodeproj/project.pbxproj",
+        "hash": "6495464750710725516"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata",
+        "hash": "14677658253387865530"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist",
+        "hash": "15708111555404766564"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings",
+        "hash": "12614023595271004039"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme",
+        "hash": "8966832331411260353"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner.xcworkspace/contents.xcworkspacedata",
+        "hash": "4742342662791468935"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist",
+        "hash": "15708111555404766564"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings",
+        "hash": "12614023595271004039"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner/AppDelegate.swift",
+        "hash": "7560884499536519015"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json",
+        "hash": "12256863929162209681"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png",
+        "hash": "10744190497123437199"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png",
+        "hash": "17857370851071422985"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png",
+        "hash": "9089880720354936574"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png",
+        "hash": "4153981484587230721"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png",
+        "hash": "14233470423577647923"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png",
+        "hash": "4256688772913297625"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png",
+        "hash": "1725712220684977236"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png",
+        "hash": "9089880720354936574"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png",
+        "hash": "11020049274280637400"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png",
+        "hash": "15597081444621038052"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png",
+        "hash": "15597081444621038052"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png",
+        "hash": "1874192408977113223"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png",
+        "hash": "6391886343813779197"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png",
+        "hash": "14420767294843778987"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png",
+        "hash": "4764981302566026812"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json",
+        "hash": "3571928194528820613"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png",
+        "hash": "8198580046434161737"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png",
+        "hash": "8198580046434161737"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png",
+        "hash": "8198580046434161737"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md",
+        "hash": "538329535567975093"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner/Base.lproj/LaunchScreen.storyboard",
+        "hash": "11147133233434053005"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner/Base.lproj/Main.storyboard",
+        "hash": "14904083556729443444"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner/Info.plist",
+        "hash": "10035552260192438479"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/Runner/Runner-Bridging-Header.h",
+        "hash": "9637544283642395751"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/ios/RunnerTests/RunnerTests.swift",
+        "hash": "6083098552769587107"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/lib/app_style/colors.dart",
+        "hash": "9738128678526025249"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/lib/generated/assets.dart",
+        "hash": "488503050641196562"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/lib/generated/intl/messages_all.dart",
+        "hash": "5664798266351087783"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/lib/generated/intl/messages_ar.dart",
+        "hash": "4108269810121379653"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/lib/generated/intl/messages_en.dart",
+        "hash": "7922499294739865185"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/lib/generated/l10n.dart",
+        "hash": "14152739024948103864"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/lib/l10n/intl_ar.arb",
+        "hash": "1389868326933519382"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/lib/l10n/intl_en.arb",
+        "hash": "1389868326933519382"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/lib/main.dart",
+        "hash": "10256440334992695708"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/lib/modules/login/pages/forget_password.dart~",
+        "hash": "11377185675055666413"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/lib/modules/login/pages/forget_password_page.dart",
+        "hash": "10520650030700783268"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/lib/modules/login/pages/forget_password_page.dart~",
+        "hash": "6186199362361838346"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/lib/modules/login/pages/login_page.dart",
+        "hash": "7072087140809248029"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/lib/modules/login/widgets/custom_button.dart",
+        "hash": "12228764694496567862"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/lib/modules/login/widgets/phone_number_row.dart",
+        "hash": "12966350308889587059"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/linux/.gitignore",
+        "hash": "17248927135541934928"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/linux/CMakeLists.txt",
+        "hash": "3093549733486791429"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/linux/flutter/CMakeLists.txt",
+        "hash": "11980246154045747296"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/linux/flutter/generated_plugin_registrant.cc",
+        "hash": "11372770350917308975"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/linux/flutter/generated_plugin_registrant.h",
+        "hash": "11836116085089029027"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/linux/flutter/generated_plugins.cmake",
+        "hash": "967311670984603872"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/linux/main.cc",
+        "hash": "17650215560441144117"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/linux/my_application.cc",
+        "hash": "18356023717294524213"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/linux/my_application.h",
+        "hash": "16247811859198089624"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/project.json",
+        "hash": "12192250619542223483"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/project.json~",
+        "hash": "4254827227338251583"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/pubspec.lock",
+        "hash": "17808442503348710799"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/pubspec.yaml",
+        "hash": "14253554850803229305"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/test/widget_test.dart",
+        "hash": "5120846207752471680"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/web/5f7b7453",
+        "hash": "12034766639833803145"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/web/favicon.png",
+        "hash": "12034766639833803145"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/web/icons/Icon-192.png",
+        "hash": "11127250911784749408"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/web/icons/Icon-512.png",
+        "hash": "17592935996014618579"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/web/icons/Icon-maskable-192.png",
+        "hash": "10072076373731019854"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/web/icons/Icon-maskable-512.png",
+        "hash": "12486398084247681868"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/web/index.html",
+        "hash": "12326696124417653171"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/web/manifest.json",
+        "hash": "6219365749083115722"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/windows/.gitignore",
+        "hash": "13778506346611041103"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/windows/CMakeLists.txt",
+        "hash": "15013774710730731147"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/windows/flutter/CMakeLists.txt",
+        "hash": "7731691271552484236"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/windows/flutter/generated_plugin_registrant.cc",
+        "hash": "16331922066231475089"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/windows/flutter/generated_plugin_registrant.h",
+        "hash": "1337393613388320760"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/windows/flutter/generated_plugins.cmake",
+        "hash": "17345984157924822862"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/windows/runner/CMakeLists.txt",
+        "hash": "13855490185982379517"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/windows/runner/Runner.rc",
+        "hash": "18000824189796235542"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/windows/runner/e004f23a",
+        "hash": "9060089372603550226"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/windows/runner/flutter_window.cpp",
+        "hash": "1488603823732164897"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/windows/runner/flutter_window.h",
+        "hash": "7655109952900221743"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/windows/runner/main.cpp",
+        "hash": "1631904679086257797"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/windows/runner/resource.h",
+        "hash": "15176675414247382188"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/windows/runner/resources/app_icon.ico",
+        "hash": "2068159416445343149"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/windows/runner/resources/e626b914",
+        "hash": "2068159416445343149"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/windows/runner/runner.exe.manifest",
+        "hash": "9060089372603550226"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/windows/runner/utils.cpp",
+        "hash": "14189937216531915874"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/windows/runner/utils.h",
+        "hash": "18264395129126980626"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/windows/runner/win32_window.cpp",
+        "hash": "4514040089842926568"
+      },
+      {
+        "file": "sherkety/apps/sherkety_project/windows/runner/win32_window.h",
+        "hash": "9216390411207458485"
+      },
+      {
+        "file": "sherkety/nx.json",
+        "hash": "2093927423690747231"
+      },
+      {
+        "file": "sherkety/package-lock.json",
+        "hash": "2668903959041639007"
+      },
+      {
+        "file": "sherkety/package.json",
+        "hash": "8597515878824992820"
+      },
+      {
+        "file": "sherkety/packages/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "sherkety/tsconfig.base.json",
+        "hash": "14534483444115666953"
+      },
+      {
+        "file": "sherkety/tsconfig.json",
+        "hash": "1379983966652230747"
+      },
+      {
+        "file": "sherkety/workspace.json",
+        "hash": "5686771699561897071"
+      }
+    ]
+  }
+}

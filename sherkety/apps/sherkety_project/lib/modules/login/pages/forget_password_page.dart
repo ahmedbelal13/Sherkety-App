@@ -1,0 +1,125 @@
+import 'package:flutter/material.dart';
+import 'package:sherkety/app_style/colors.dart';
+import 'package:sherkety/modules/login/widgets/custom_button.dart';
+
+import '../widgets/phone_number_row.dart';
+
+class ForgetPasswordPage extends StatelessWidget {
+  const ForgetPasswordPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          leading: IconButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            icon: Icon(
+              Icons.arrow_back_ios_sharp,
+              color: Color(0xff4A42EB),
+            ),
+            color: Colors.black,
+          ),
+        ),
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Column(
+            children: [
+              SizedBox(height: 28),
+              Align(
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'نسيت كلمة السر؟',
+                  style: TextStyle(
+                    color: AppColors.greenColor,
+                    fontSize: 24,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ),
+              SizedBox(height: 8),
+              Align(
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'لا تقلق! يحدث هذا أحيانًا. من فضلك، أدخل رقم جوالك المرتبط بحسابك.',
+                  style: TextStyle(
+                    color: Color(0xff414346),
+                    fontSize: 16,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+              ),
+              SizedBox(height: 24),
+              PhoneNumberRow(),
+              SizedBox(height: 24),
+              Spacer(),
+              RichText(
+                text: TextSpan(
+                  style: TextStyle(
+                    color: Color(0xff414346),
+                    fontSize: 16,
+                    letterSpacing: .5,
+                    fontWeight: FontWeight.w400,
+                  ),
+
+                  children: <TextSpan>[
+                    TextSpan(text: "لقد قرأت وفهمت "),
+                    TextSpan(
+                      text: "شروط الخدمة ",
+                      style: TextStyle(
+                        color: Color(0xff003d79),
+                        fontWeight: FontWeight.w800,
+                        fontSize: 16,
+                        letterSpacing: .5,
+                      ),
+                    ),
+                    TextSpan(text: "و "),
+                    TextSpan(
+                      text: "سياسة\n الخصوصية ",
+                      style: TextStyle(
+                        height: 1,
+                        color: Color(0xff003d79),
+                        fontWeight: FontWeight.w800,
+                        fontSize: 16,
+                        letterSpacing: .5,
+                      ),
+                    ),
+                    TextSpan(text: "وأوافق عليها."),
+                  ],
+                ),
+              ),
+              SizedBox(height: 24),
+              CustomButton(
+                text: 'التالي',
+              ),
+              SizedBox(height: 24),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'تذكرت كلمه السر؟',
+                    style: TextStyle(
+                      color: Color(0xff2E3233),
+                      fontWeight: FontWeight.w400,
+                      fontSize: 16,
+                    ),
+                  ),
+                  SizedBox(width: 8),
+                  Text(
+                    'ادخل الآن!',
+                    style: TextStyle(
+                      color: Color(0xff4A42EB),
+                      fontWeight: FontWeight.w700,
+                      fontSize: 16,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 24),
+            ],
+          ),
+        ));
+  }
+}
