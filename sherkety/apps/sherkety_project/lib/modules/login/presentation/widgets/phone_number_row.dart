@@ -1,6 +1,5 @@
-import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:intl_phone_number_input/intl_phone_number_input.dart';
+import '../../data/models/country_model.dart';
 
 class PhoneNumberRow extends StatelessWidget {
   const PhoneNumberRow({super.key});
@@ -34,6 +33,7 @@ class PhoneNumberRow extends StatelessWidget {
           ),
           const SizedBox(width: 8),
           Expanded(
+            flex: 1,
             child: Container(
               height: 60,
               decoration: BoxDecoration(
@@ -42,77 +42,77 @@ class PhoneNumberRow extends StatelessWidget {
                   color: const Color(0xffF0F1F5),
                 ),
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text(
-                    '20+',
-                    style: TextStyle(
-                        fontSize: 24,
-                        color: Color(0xFF1F2122),
-                        fontWeight: FontWeight.w700),
-                  ),
-                  const SizedBox(width: 11),
-                  Image.asset(
-                    'assets/images/flag.png',
-                    width: 24,
-                    height: 24,
-                  ),
-                ],
-              ),
-
-              // child: CountryCodePicker(
-              //   onChanged: print,
-              //   // Initial selection and favorite can be one of code ('IT') OR dial_code('+39')
-              //   initialSelection: 'IT',
-              //   favorite: ['+39', 'FR'],
-              //   // optional. Shows only country name and flag
-              //   showCountryOnly: false,
-              //   // optional. Shows only country name and flag when popup is closed.
-              //   showOnlyCountryWhenClosed: false,
-              //   // optional. aligns the flag and the Text left
-              //   alignLeft: true,
-              // ),
-
-
-
-              // child: Directionality(
-              //   textDirection: TextDirection.ltr,
-              //   child: InternationalPhoneNumberInput(
-              //     onInputChanged: (PhoneNumber number) {
-              //       print(number.phoneNumber);
-              //     },
-              //     selectorConfig: SelectorConfig(
-              //       selectorType: PhoneInputSelectorType.DROPDOWN,
-              //       leadingPadding: 12,
-              //       trailingSpace: false,
-              //       showFlags: true,
-              //       setSelectorButtonAsPrefixIcon: false,
-              //     ),
-              //     ignoreBlank: false,
-              //     initialValue: PhoneNumber(isoCode: 'EG'),
-              //     inputDecoration: InputDecoration(
-              //       contentPadding: EdgeInsets.symmetric(vertical: 12),
-              //       border: OutlineInputBorder(
-              //         borderRadius: BorderRadius.circular(8),
-              //       ),
-              //     ),
-              //     textAlign: TextAlign.left,
-              //   ),
-              // ),
+              child: const Center(child: CountryDropdown()),
             ),
           ),
         ],
       ),
     );
   }
+}
 
-  String generateCountryFlag() {
-    String countryCode = 'eg';
+class CountryDropdown extends StatefulWidget {
+  const CountryDropdown({super.key});
 
-    String flag = countryCode.toUpperCase().replaceAllMapped(RegExp(r'[A-Z]'),
-        (match) => String.fromCharCode(match.group(0)!.codeUnitAt(0) + 127397));
+  @override
+  _CountryDropdownState createState() => _CountryDropdownState();
+}
 
-    return flag;
+class _CountryDropdownState extends State<CountryDropdown> {
+  Country selectedCountry =
+      countries.firstWhere((country) => country.name == 'Egypt');
+
+  @override
+  Widget build(BuildContext context) {
+    return DropdownButtonHideUnderline(
+      child: DropdownButton<Country>(
+        value: selectedCountry,
+        elevation: 0,
+        icon: const SizedBox.shrink(),
+        onChanged: (Country? newCountry) {
+          setState(() {
+            selectedCountry = newCountry!;
+          });
+        },
+        items: countries.map((Country country) {
+          return DropdownMenuItem<Country>(
+            value: country,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: 50,
+                  child: Text(
+                    Localizations.localeOf(context).languageCode == 'ar'
+                        ? '${country.code}+'
+                        : '+${country.code}',
+                    style: const TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700,
+                    ),
+                    textDirection:
+                        Localizations.localeOf(context).languageCode == 'ar'
+                            ? TextDirection.rtl
+                            : TextDirection.ltr,
+                    textAlign: TextAlign.center
+                  ),
+                ),
+                const SizedBox(width: 8),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(32),
+                  child: Image.asset(
+                    country.flagPath,
+                    width: 32,
+                    height: 32,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ],
+            ),
+          );
+        }).toList(),
+      ),
+    );
   }
 }
