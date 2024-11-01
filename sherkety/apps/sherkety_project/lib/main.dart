@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sherkety/modules/login/pages/forget_password_page.dart';
-import 'package:sherkety/modules/login/pages/login_page.dart';
 import 'app_style/colors.dart';
 import 'generated/l10n.dart';
+import 'modules/login/presentation/pages/login_page.dart';
 
 void main() {
   runApp(const MyApp());

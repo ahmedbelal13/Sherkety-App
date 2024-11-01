@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sherkety/app_style/colors.dart';
-import 'package:sherkety/modules/login/widgets/custom_button.dart';
 
+import '../widgets/custom_button.dart';
 import '../widgets/phone_number_row.dart';
 
 class ForgetPasswordPage extends StatelessWidget {
