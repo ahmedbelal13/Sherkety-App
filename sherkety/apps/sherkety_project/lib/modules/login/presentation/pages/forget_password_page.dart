@@ -1,10 +1,21 @@
 import 'package:flutter/material.dart';
 import '../../../../core/app_style/colors.dart';
+import '../../../../core/widgets/custom_text_field.dart';
 import '../widgets/custom_button.dart';
-import '../widgets/phone_number_row.dart';
+import '../widgets/country_dropdown.dart';
+import 'create_password_page.dart';
 
-class ForgetPasswordPage extends StatelessWidget {
+class ForgetPasswordPage extends StatefulWidget {
   const ForgetPasswordPage({super.key});
+
+  @override
+  State<ForgetPasswordPage> createState() => _ForgetPasswordPageState();
+}
+
+class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
+  TextEditingController phoneNumberController = TextEditingController();
+  AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
+  String countryCode ='+20';
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +26,7 @@ class ForgetPasswordPage extends StatelessWidget {
             onPressed: () {
               Navigator.of(context).pop();
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back_ios_sharp,
               color: Color(0xff4A42EB),
             ),
@@ -26,8 +37,8 @@ class ForgetPasswordPage extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
             children: [
-              SizedBox(height: 28),
-              Align(
+              const SizedBox(height: 28),
+              const Align(
                 alignment: Alignment.centerRight,
                 child: Text(
                   'نسيت كلمة السر؟',
@@ -38,8 +49,8 @@ class ForgetPasswordPage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 8),
-              Align(
+              const SizedBox(height: 8),
+              const Align(
                 alignment: Alignment.centerRight,
                 child: Text(
                   'لا تقلق! يحدث هذا أحيانًا. من فضلك، أدخل رقم جوالك المرتبط بحسابك.',
@@ -50,51 +61,60 @@ class ForgetPasswordPage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 24),
-              PhoneNumberRow(),
-              SizedBox(height: 24),
-              Spacer(),
-              RichText(
-                text: TextSpan(
-                  style: TextStyle(
-                    color: Color(0xff414346),
-                    fontSize: 16,
-                    letterSpacing: .5,
-                    fontWeight: FontWeight.w400,
-                  ),
-
-                  children: <TextSpan>[
-                    TextSpan(text: "لقد قرأت وفهمت "),
-                    TextSpan(
-                      text: "شروط الخدمة ",
-                      style: TextStyle(
-                        color: Color(0xff003d79),
-                        fontWeight: FontWeight.w800,
-                        fontSize: 16,
-                        letterSpacing: .5,
+              const SizedBox(height: 24),
+              SizedBox(
+                height: 68,
+                child: Row(
+                  children: [
+                    Expanded(
+                      flex: 2,
+                      child: CustomTextField(
+                        hintText: 'رقم الهاتف...',
+                        keyboardType: TextInputType.phone,
+                        controller: phoneNumberController,
                       ),
                     ),
-                    TextSpan(text: "و "),
-                    TextSpan(
-                      text: "سياسة\n الخصوصية ",
-                      style: TextStyle(
-                        height: 1,
-                        color: Color(0xff003d79),
-                        fontWeight: FontWeight.w800,
-                        fontSize: 16,
-                        letterSpacing: .5,
+                    const SizedBox(width: 8),
+                    Expanded(
+                      flex: 1,
+                      child: Container(
+                        height: 60,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                          border: Border.all(
+                            color: const Color(0xffF0F1F5),
+                          ),
+                        ),
+                        child: Center(
+                          child: CountryDropdown(
+                            onCountryChanged: (country) {
+                              countryCode = country.code;
+                            },
+                          ),
+                        ),
                       ),
                     ),
-                    TextSpan(text: "وأوافق عليها."),
                   ],
                 ),
               ),
-              SizedBox(height: 24),
+              const Spacer(),
+              const TermsAndPrivacyAgreement(),
+              const SizedBox(height: 24),
               CustomButton(
                 text: 'التالي',
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) =>  CreatePasswordPage(
+                        phoneNumber: phoneNumberController.text,
+                        countryCode: countryCode,
+                      ),
+                    ),
+                  );
+                },
               ),
-              SizedBox(height: 24),
-              Row(
+              const SizedBox(height: 24),
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
@@ -116,9 +136,53 @@ class ForgetPasswordPage extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 24),
+              const SizedBox(height: 24),
             ],
           ),
         ));
+  }
+}
+
+class TermsAndPrivacyAgreement extends StatelessWidget {
+  const TermsAndPrivacyAgreement({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return RichText(
+      text: const TextSpan(
+        style: TextStyle(
+          color: Color(0xff414346),
+          fontSize: 16,
+          letterSpacing: .5,
+          fontWeight: FontWeight.w400,
+        ),
+        children: <TextSpan>[
+          TextSpan(text: "لقد قرأت وفهمت "),
+          TextSpan(
+            text: "شروط الخدمة ",
+            style: TextStyle(
+              color: Color(0xff003d79),
+              fontWeight: FontWeight.w800,
+              fontSize: 16,
+              letterSpacing: .5,
+            ),
+          ),
+          TextSpan(text: "و "),
+          TextSpan(
+            text: "سياسة\n الخصوصية ",
+            style: TextStyle(
+              height: 1,
+              color: Color(0xff003d79),
+              fontWeight: FontWeight.w800,
+              fontSize: 16,
+              letterSpacing: .5,
+            ),
+          ),
+          TextSpan(text: "وأوافق عليها."),
+        ],
+      ),
+    );
   }
 }
