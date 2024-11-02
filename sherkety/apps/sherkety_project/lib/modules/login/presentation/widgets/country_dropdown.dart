@@ -1,58 +1,14 @@
 import 'package:flutter/material.dart';
 import '../../data/models/country_model.dart';
 
-class PhoneNumberRow extends StatelessWidget {
-  const PhoneNumberRow({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 68,
-      child: Row(
-        children: [
-          Expanded(
-            flex: 2,
-            child: TextFormField(
-              keyboardType: TextInputType.phone,
-              decoration: InputDecoration(
-                hintText: 'رقم الهاتف...',
-                hintStyle: const TextStyle(
-                  color: Color(0xFFAAADB1),
-                  fontSize: 16,
-                  fontWeight: FontWeight.w700,
-                ),
-                enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8),
-                    borderSide: const BorderSide(color: Color(0xffAAADB1))),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8),
-                  borderSide: const BorderSide(color: Color(0xff003D79)),
-                ),
-              ),
-            ),
-          ),
-          const SizedBox(width: 8),
-          Expanded(
-            flex: 1,
-            child: Container(
-              height: 60,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
-                border: Border.all(
-                  color: const Color(0xffF0F1F5),
-                ),
-              ),
-              child: const Center(child: CountryDropdown()),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
 
 class CountryDropdown extends StatefulWidget {
-  const CountryDropdown({super.key});
+  final Function(Country) onCountryChanged;
+
+  const CountryDropdown({
+    super.key,
+    required this.onCountryChanged,
+  });
 
   @override
   _CountryDropdownState createState() => _CountryDropdownState();
@@ -70,9 +26,12 @@ class _CountryDropdownState extends State<CountryDropdown> {
         elevation: 0,
         icon: const SizedBox.shrink(),
         onChanged: (Country? newCountry) {
-          setState(() {
-            selectedCountry = newCountry!;
-          });
+          if (newCountry != null) {
+            setState(() {
+              selectedCountry = newCountry;
+            });
+            widget.onCountryChanged(newCountry);
+          }
         },
         items: countries.map((Country country) {
           return DropdownMenuItem<Country>(
@@ -95,7 +54,7 @@ class _CountryDropdownState extends State<CountryDropdown> {
                         Localizations.localeOf(context).languageCode == 'ar'
                             ? TextDirection.rtl
                             : TextDirection.ltr,
-                    textAlign: TextAlign.center
+                    textAlign: TextAlign.center,
                   ),
                 ),
                 const SizedBox(width: 8),
