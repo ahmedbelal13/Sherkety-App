@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:sherkety/modules/login/presentation/pages/create_password_page.dart';
 import '../../../../core/app_style/colors.dart';
+import '../../../../core/widgets/custom_text_field.dart';
 import '../widgets/custom_button.dart';
-import '../widgets/phone_number_row.dart';
+import '../widgets/country_dropdown.dart';
 import 'forget_password_page.dart';
 
 class LoginPage extends StatelessWidget {
@@ -41,16 +43,51 @@ class LoginPage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 24),
-            PhoneNumberRow(),
+            SizedBox(
+              height: 68,
+              child: Row(
+                children: [
+                  const Expanded(
+                    flex: 2,
+                    child: CustomTextField(
+                      hintText: 'رقم الهاتف...',
+                      keyboardType: TextInputType.phone,
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      height: 60,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(
+                          color: const Color(0xffF0F1F5),
+                        ),
+                      ),
+                      child:  Center(
+                        child: CountryDropdown(
+                          onCountryChanged: (country){},
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
             SizedBox(height: 24),
-            PasswordField(),
+            CustomTextField(
+              hintText: 'رقم الهاتف...',
+              keyboardType: TextInputType.phone,
+            ),
             SizedBox(height: 24),
             Align(
               alignment: Alignment.centerLeft,
               child: GestureDetector(
                 onTap: () {
                   Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => ForgetPasswordPage()),
+                    MaterialPageRoute(
+                        builder: (context) => ForgetPasswordPage()),
                   );
                 },
                 child: Text(
@@ -153,8 +190,6 @@ class OrDivider extends StatelessWidget {
   }
 }
 
-
-
 class PasswordField extends StatelessWidget {
   const PasswordField({super.key});
 
@@ -181,8 +216,6 @@ class PasswordField extends StatelessWidget {
     );
   }
 }
-
-
 
 class SocialMediaIcon extends StatelessWidget {
   final String icon;
